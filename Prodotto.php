@@ -4,7 +4,6 @@ class Prodotto {
     public $modello;
     public $memoria;
     public $prezzo;
-
     public function __construct($_marca, $_modello, $_prezzo) {
         $this->marca = $_marca;
         $this->modello = $_modello;
