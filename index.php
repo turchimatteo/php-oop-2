@@ -11,21 +11,27 @@ require_once __DIR__ . '/PS5.php';
 require_once __DIR__ . '/XboxSerieX.php';
 require_once __DIR__ . '/User.php';
 
-$nintendoSW = new NintendoSW('Nintendo', '500gb', 'gioco in omaggio');
+
 
 try{
-    $PS5 = new PS5('Sony', '1tb', 'Disponibile');
+    $PS5 = new PS5('Sony', 'Digital Version', '1tb', '500€');
+} catch(Exception $e){
+    echo 'Errore stiamo gestendo la pagina';
+    die();
+}
+try{
+    $XboxSerieX = new XboxSerieX('Microsoft', 'Digital Version', '1tb', '400€');
 } catch(Exception $e){
     echo 'Errore stiamo gestendo la pagina';
     die();
 }
 
-$matteo = new User('Matteo', 'Turchi', 'turchi@gmail.com');
-$matteo->addProduct($PS5);
-$matteo->addProduct($XboxSerieX);
-$matteo_cart = $matteo->getCart();
+$matteo = new User('Matteo', 'Turchi', 'turchi@gmail.com', 22);
+$matteo->aggiungiProdotto($PS5);
+$matteo->aggiungiProdotto($XboxSerieX);
+$matteo_cart = $matteo->getCarrello();
 
-var_dump($matteo_cart);
+/* var_dump($matteo_cart); */
 ?>
 <!DOCTYPE html>
 <html lang="it">
