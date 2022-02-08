@@ -5,6 +5,7 @@ class XboxSerieX extends Prodotto{
     public $modello = 'Xbox serie X';
     public $memoria = '1tb';
     public $prezzo = '400€';
+    public $disponibilità = 'Versione da 1tb colore nero non disponibile';
 }
 
 ?>

@@ -50,6 +50,7 @@ $matteo_cart = $matteo->getCarrello();
             <h2>Modello: <?php echo $element->modello ?> </h2>
             <h3>Memoria: <?php echo $element->memoria ?> €</h3>
             <h4>Prezzo: <?php echo $element->prezzo ?></h4>
+            <h5>Disponibilità: <?php echo $element->disponibilità ?></h5>
         </div>
     <?php } ?>
 
